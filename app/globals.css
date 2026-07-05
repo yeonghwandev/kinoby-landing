@@ -18,6 +18,6 @@ html {
 }
 
 body {
-  background-color: var(--color-canvas);
-  color: var(--color-text-body);
+  background-color: #040812;
+  color: #f8fafc;
 }

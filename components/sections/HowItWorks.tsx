@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 const steps = [
   {
     number: "01",
@@ -17,58 +21,61 @@ const steps = [
     description: "프롬프트 복사 → Kling에 붙여넣기 → 완성",
     icon: "🎥",
   },
-];
+]
 
 export default function HowItWorks() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-28" style={{ backgroundColor: "#060d1a" }}>
       <div className="mx-auto max-w-4xl">
-        {/* Section header */}
-        <div className="mb-14 text-center">
-          <h2
-            className="text-3xl font-bold sm:text-4xl"
-            style={{ color: "var(--color-text-title)" }}
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
+        >
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
             어떻게 작동하나요?
           </h2>
-          <p className="mt-3 text-base" style={{ color: "var(--color-text-secondary)" }}>
+          <p className="mt-3 text-base" style={{ color: "#64748b" }}>
             3단계로 내 이야기가 영상이 됩니다
           </p>
-        </div>
+        </motion.div>
 
-        {/* Step cards */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {steps.map((step) => (
-            <div
+          {steps.map((step, i) => (
+            <motion.div
               key={step.number}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="rounded-2xl border p-6"
               style={{
-                backgroundColor: "var(--color-card)",
-                borderColor: "var(--color-border)",
+                backgroundColor: "#0a1628",
+                borderColor: "#1e3a5f",
               }}
             >
               <div className="mb-4 flex items-center gap-3">
                 <span
                   className="text-xs font-bold tracking-widest"
-                  style={{ color: "var(--color-primary)" }}
+                  style={{ color: "#5B9DF9" }}
                 >
                   {step.number}
                 </span>
                 <span className="text-xl">{step.icon}</span>
               </div>
-              <h3
-                className="mb-2 text-lg font-semibold"
-                style={{ color: "var(--color-text-title)" }}
-              >
+              <h3 className="mb-2 text-lg font-semibold text-white">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>
                 {step.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
