@@ -40,7 +40,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="px-6 py-28" style={{ backgroundColor: "#060D1A" }}>
+    <section className="px-6 py-28" style={{ backgroundColor: "#EFF6FF" }}>
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,10 +49,10 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl font-bold sm:text-4xl text-white">
+          <h2 className="text-3xl font-bold sm:text-4xl" style={{ color: "#141527" }}>
             어떻게 작동하나요?
           </h2>
-          <p className="mt-3 text-base" style={{ color: "#64748b" }}>
+          <p className="mt-3 text-base" style={{ color: "#63627A" }}>
             3단계로 내 이야기가 영상이 됩니다
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="flex-1 rounded-2xl border p-6"
-                style={{ backgroundColor: "#0F1E32", borderColor: "#1E3A5F" }}
+                style={{ backgroundColor: "#FFFFFF", borderColor: "#C7D9F8" }}
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="text-xs font-bold tracking-widest" style={{ color: "#4A90E2" }}>
@@ -78,10 +78,10 @@ export default function HowItWorks() {
                   </span>
                   <span className="text-xl">{step.icon}</span>
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-white">
+                <h3 className="mb-2 text-lg font-semibold" style={{ color: "#141527" }}>
                   {step.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#94a3b8" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "#63627A" }}>
                   {step.description}
                 </p>
               </motion.div>
