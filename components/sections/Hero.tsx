@@ -28,7 +28,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className="mb-5 rounded-full border px-4 py-1.5 text-sm font-medium"
-        style={{ borderColor: "#C7D9F8", color: "#2563EB", backgroundColor: "#EFF6FF" }}
+        style={{ borderColor: "#C7D9F8", color: "#4A90E2", backgroundColor: "#EFF6FF" }}
       >
         이야기는 있는데, 영상은 어떻게 만들지?
       </motion.p>
@@ -45,7 +45,7 @@ export default function Hero() {
         <br />
         <span
           className="bg-clip-text text-transparent"
-          style={{ backgroundImage: "linear-gradient(135deg, #2563EB, #7CC0F5)" }}
+          style={{ backgroundImage: "linear-gradient(135deg, #4A90E2, #7CC0F5)" }}
         >
           AI 영상
         </span>
@@ -77,7 +77,8 @@ export default function Hero() {
           whileTap={{ scale: 0.97 }}
         >
           <Button
-            className="rounded-xl px-10 py-4 text-base font-semibold text-white border-none bg-blue-600 hover:bg-blue-700 shadow-lg transition-colors"
+            className="rounded-xl px-10 py-4 text-base font-semibold text-white border-none shadow-lg transition-colors"
+            style={{ backgroundColor: "#4A90E2" }}
           >
             베타 신청하기 →
           </Button>

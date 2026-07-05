@@ -40,7 +40,7 @@ export default function DemoSection() {
             </div>
             <div
               className="h-10 w-40 rounded-lg"
-              style={{ backgroundImage: "linear-gradient(135deg, #2563EB, #7CC0F5)" }}
+              style={{ backgroundImage: "linear-gradient(135deg, #4A90E2, #7CC0F5)" }}
             />
           </div>
 
@@ -50,7 +50,7 @@ export default function DemoSection() {
               animate={{ opacity: [0.8, 1, 0.8] }}
               transition={{ repeat: Infinity, duration: 2.5 }}
               className="rounded-full px-4 py-1.5 text-sm font-semibold text-white"
-              style={{ backgroundImage: "linear-gradient(135deg, #2563EB, #7CC0F5)" }}
+              style={{ backgroundImage: "linear-gradient(135deg, #4A90E2, #7CC0F5)" }}
             >
               베타 출시 후 공개 예정
             </motion.span>

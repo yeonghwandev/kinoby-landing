@@ -55,7 +55,7 @@ export default function HowItWorks() {
               style={{ backgroundColor: "#FFFFFF", borderColor: "#E7E5F0" }}
             >
               <div className="mb-4 flex items-center gap-3">
-                <span className="text-xs font-bold tracking-widest" style={{ color: "#2563EB" }}>
+                <span className="text-xs font-bold tracking-widest" style={{ color: "#4A90E2" }}>
                   {step.number}
                 </span>
                 <span className="text-xl">{step.icon}</span>

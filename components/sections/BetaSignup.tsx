@@ -25,7 +25,7 @@ export default function BetaSignup() {
           <br />
           <span
             className="bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(135deg, #2563EB, #7CC0F5)" }}
+            style={{ backgroundImage: "linear-gradient(135deg, #4A90E2, #7CC0F5)" }}
           >
             가장 먼저
           </span>{" "}
@@ -57,7 +57,8 @@ export default function BetaSignup() {
             whileTap={{ scale: 0.97 }}
           >
             <Button
-              className="rounded-xl px-10 py-4 text-base font-semibold text-white border-none bg-blue-600 hover:bg-blue-700 shadow-lg transition-colors"
+              className="rounded-xl px-10 py-4 text-base font-semibold text-white border-none shadow-lg transition-colors"
+              style={{ backgroundColor: "#4A90E2" }}
             >
               베타 신청하기 →
             </Button>
