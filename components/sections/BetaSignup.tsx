@@ -21,7 +21,8 @@ export default function BetaSignup() {
           className="mb-4 text-3xl font-bold sm:text-4xl"
           style={{ color: "#141527" }}
         >
-          지금 베타 신청하면{" "}
+          지금 베타 신청하면
+          <br />
           <span
             className="bg-clip-text text-transparent"
             style={{ backgroundImage: "linear-gradient(135deg, #2563EB, #7CC0F5)" }}

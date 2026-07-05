@@ -41,7 +41,8 @@ export default function Hero() {
         className="mb-6 max-w-2xl text-5xl font-bold leading-tight tracking-tight sm:text-6xl"
         style={{ color: "#141527" }}
       >
-        머릿속 이야기를{" "}
+        머릿속 이야기를
+        <br />
         <span
           className="bg-clip-text text-transparent"
           style={{ backgroundImage: "linear-gradient(135deg, #2563EB, #7CC0F5)" }}
