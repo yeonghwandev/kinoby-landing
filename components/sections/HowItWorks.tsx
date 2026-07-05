@@ -58,7 +58,7 @@ export default function HowItWorks() {
         </motion.div>
 
         {/* 타임라인 */}
-        <div className="flex flex-col items-center gap-0 sm:flex-row sm:items-stretch sm:gap-0">
+        <div className="flex flex-col items-stretch gap-0 sm:flex-row sm:items-stretch sm:gap-0">
           {steps.map((step, i) => (
             <>
               {/* 카드 */}
@@ -69,7 +69,7 @@ export default function HowItWorks() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="flex-1 rounded-2xl border p-6"
+                className="flex-1 rounded-2xl border p-6 min-h-[160px]"
                 style={{ backgroundColor: "#FFFFFF", borderColor: "#C7D9F8" }}
               >
                 <div className="mb-4 flex items-center gap-3">
