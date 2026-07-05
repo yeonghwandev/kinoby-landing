@@ -25,8 +25,7 @@ export default function BetaSignup() {
         </p>
         <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
           <Button
-            size="lg"
-            className="rounded-xl px-10 py-4 text-base font-semibold text-white shadow-lg"
+            className="rounded-xl px-10 py-4 text-base font-semibold text-white shadow-lg hover:opacity-90 transition-opacity"
             style={{ backgroundImage: "var(--gradient-ai)" }}
           >
             베타 신청하기 →

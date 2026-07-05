@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-primary: #2563EB;
   --color-primary-hover: #1D4ED8;
@@ -10,6 +14,7 @@
   --color-text-body: #1A1A2B;
   --color-text-secondary: #63627A;
   --gradient-ai: linear-gradient(135deg, #5B9DF9, #7CC0F5);
+  --ring: #2563EB;
 }
 
 body {

@@ -47,7 +47,6 @@ export default function Hero() {
       {/* CTA */}
       <a href="#beta">
         <Button
-          size="lg"
           className="rounded-xl px-8 py-4 text-base font-semibold text-white shadow-md bg-blue-600 hover:bg-blue-700 border-none transition-colors"
         >
           베타 신청하기
