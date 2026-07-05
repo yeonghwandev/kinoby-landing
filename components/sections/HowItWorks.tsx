@@ -25,14 +25,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section
-      className="px-6 py-28"
-      style={{
-        backgroundColor: "#060d1a",
-        backgroundImage: "radial-gradient(circle at 1px 1px, #0f1f35 1px, transparent 0)",
-        backgroundSize: "32px 32px",
-      }}
-    >
+    <section className="px-6 py-28" style={{ backgroundColor: "#F8FAFC" }}>
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,10 +34,10 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl" style={{ color: "#141527" }}>
             어떻게 작동하나요?
           </h2>
-          <p className="mt-3 text-base" style={{ color: "#64748b" }}>
+          <p className="mt-3 text-base" style={{ color: "#63627A" }}>
             3단계로 내 이야기가 영상이 됩니다
           </p>
         </motion.div>
@@ -59,24 +52,18 @@ export default function HowItWorks() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="rounded-2xl border p-6"
-              style={{
-                backgroundColor: "#0a1628",
-                borderColor: "#1e3a5f",
-              }}
+              style={{ backgroundColor: "#FFFFFF", borderColor: "#E7E5F0" }}
             >
               <div className="mb-4 flex items-center gap-3">
-                <span
-                  className="text-xs font-bold tracking-widest"
-                  style={{ color: "#5B9DF9" }}
-                >
+                <span className="text-xs font-bold tracking-widest" style={{ color: "#2563EB" }}>
                   {step.number}
                 </span>
                 <span className="text-xl">{step.icon}</span>
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-white">
+              <h3 className="mb-2 text-lg font-semibold" style={{ color: "#141527" }}>
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#63627A" }}>
                 {step.description}
               </p>
             </motion.div>
