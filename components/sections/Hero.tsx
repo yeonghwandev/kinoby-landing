@@ -19,7 +19,7 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
         className="mb-12"
       >
-        <Image src="/kinoby.png" alt="Kinoby" width={200} height={67} className="object-contain" />
+        <Image src="/kinoby.png" alt="Kinoby" width={300} height={100} className="object-contain" />
       </motion.div>
 
       {/* Pain 배지 */}
