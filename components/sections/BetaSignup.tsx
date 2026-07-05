@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
 const FORM_URL = "https://forms.gle/ocPrKm3y4trMcdLx7"
+const KAKAO_URL = "https://open.kakao.com/o/gt0IEFCi"
 
 export default function BetaSignup() {
   return (
@@ -63,6 +64,24 @@ export default function BetaSignup() {
               베타 신청하기 →
             </Button>
           </motion.a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-4"
+        >
+          <a
+            href={KAKAO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm underline underline-offset-4"
+            style={{ color: "#63627A" }}
+          >
+            오픈채팅방 참여하기
+          </a>
         </motion.div>
       </div>
     </section>
