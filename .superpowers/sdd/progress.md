@@ -1,0 +1,7 @@
+Task 1: complete (commits 4e3e291..64235fa, review clean — Minor: Button CSS vars undefined by design, font-sans note)
+Task 2: complete (commit 5e7b6cf, review clean)
+Task 3: complete (commit dba7d26, review clean)
+Task 4: complete (commit c1af070, review clean)
+Task 5: complete (commit e63b8f8, review clean)
+Task 5 fixes: complete (commit 89d3d1f — button sizing, hover, OG tags, smooth scroll)
+Task 6: complete (GitHub repo pushed — https://github.com/yeonghwandev/kinoby-landing)

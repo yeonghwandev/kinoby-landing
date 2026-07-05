@@ -25,7 +25,14 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="px-6 py-28" style={{ backgroundColor: "#060d1a" }}>
+    <section
+      className="px-6 py-28"
+      style={{
+        backgroundColor: "#060d1a",
+        backgroundImage: "radial-gradient(circle at 1px 1px, #0f1f35 1px, transparent 0)",
+        backgroundSize: "32px 32px",
+      }}
+    >
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

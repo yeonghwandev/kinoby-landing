@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
@@ -24,9 +25,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-12 text-2xl font-bold tracking-tight text-white"
+        className="mb-12"
       >
-        Kinoby
+        <Image src="/kinoby.png" alt="Kinoby" width={120} height={40} className="object-contain" />
       </motion.div>
 
       {/* Pain 한 줄 */}
@@ -37,7 +38,7 @@ export default function Hero() {
         className="mb-5 rounded-full border px-4 py-1.5 text-sm font-medium"
         style={{ borderColor: "#1e3a5f", color: "#7CC0F5", backgroundColor: "#0a1628" }}
       >
-        AI 영상 써보려고 하면 프롬프트에서 막히죠?
+        이야기는 있는데, 영상은 어떻게 만들지?
       </motion.p>
 
       {/* 헤드라인 */}
@@ -47,14 +48,16 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mb-6 max-w-2xl text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl"
       >
-        내 이야기를{" "}
+        이야기에서{" "}
         <span
           className="bg-clip-text text-transparent"
           style={{ backgroundImage: "linear-gradient(135deg, #5B9DF9, #7CC0F5)" }}
         >
           AI 영상
         </span>
-        으로
+        까지
+        <br />
+        처음부터 끝까지
       </motion.h1>
 
       {/* 서브카피 */}
@@ -65,9 +68,9 @@ export default function Hero() {
         className="mb-10 max-w-md text-base leading-relaxed sm:text-lg"
         style={{ color: "#94a3b8" }}
       >
-        카메라 구도 몰라도 됩니다.
+        씬 구성, 연출, 프롬프트 — 전부 Kinoby가 잡아줍니다.
         <br />
-        씬 분위기만 말하면 Kinoby가 Kling 프롬프트로 만들어드려요.
+        당신은 이야기만 하면 됩니다.
       </motion.p>
 
       {/* CTA */}
