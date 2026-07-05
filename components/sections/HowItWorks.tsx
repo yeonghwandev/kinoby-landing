@@ -6,19 +6,34 @@ const steps = [
   {
     number: "01",
     title: "이야기 입력",
-    description: ["만들고 싶은 이야기를", "그냥 써보세요"],
+    description: (
+      <>
+        만들고 싶은 이야기를<br />
+        <strong>그냥 써보세요</strong>
+      </>
+    ),
     icon: "✏️",
   },
   {
     number: "02",
     title: "스토리보드",
-    description: ["이야기만 쓰면 AI가", "씬·연출·흐름을 자동으로 완성해줘요"],
+    description: (
+      <>
+        이야기만 쓰면 AI가<br />
+        <strong>씬·연출·흐름을 자동으로 완성</strong>해줘요
+      </>
+    ),
     icon: "🎬",
   },
   {
     number: "03",
     title: "영상 생성",
-    description: ["완성된 프롬프트를 Kling에 붙여넣으면", "내 이야기가 영상이 됩니다"],
+    description: (
+      <>
+        완성된 프롬프트를 Kling에 붙여넣으면<br />
+        <strong>내 이야기가 영상이 됩니다</strong>
+      </>
+    ),
     icon: "🎥",
   },
 ]
@@ -64,9 +79,7 @@ export default function HowItWorks() {
                 {step.title}
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: "#63627A" }}>
-                {step.description[0]}
-                <br />
-                {step.description[1]}
+                {step.description}
               </p>
             </motion.div>
           ))}
