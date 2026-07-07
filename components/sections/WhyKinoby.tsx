@@ -59,8 +59,8 @@ export default function WhyKinoby() {
               스토리보드로 먼저 그림을 잡아요
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#63627A" }}>
-              씬별로 흐름을 잡고, 각 샷에 맞는 키샷과 프롬프트를 자동으로 완성해줘요.
-              찍기 전에 전체 그림이 보이니까, 낭비 없이 한 번에 완성됩니다.
+              씬별 흐름과 키샷 프롬프트를 자동으로 잡아줘요.<br />
+              전체 그림이 보이니까 낭비 없이 한 번에 완성됩니다.
             </p>
           </motion.div>
 
@@ -82,8 +82,8 @@ export default function WhyKinoby() {
               영화적 기법, 몰라도 됩니다
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#63627A" }}>
-              영화적·서사적 연출 기법을 학습한 모델이 여러분의 스토리를 가장 흥미로운 씬과 샷으로 만들어냅니다.
-              카메라 연출은 Kinoby가 알아서 해드려요.
+              스토리만 입력하면 영화적 연출로 씬과 샷을 자동 구성해드려요.<br />
+              카메라 기법은 몰라도 됩니다.
             </p>
           </motion.div>
         </div>
