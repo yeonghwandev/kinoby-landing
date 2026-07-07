@@ -60,7 +60,7 @@ export default function HowItWorks() {
         {/* 타임라인 */}
         <div className="flex flex-col items-stretch gap-0 sm:flex-row sm:items-stretch sm:gap-0">
           {steps.map((step, i) => (
-            <>
+            <div key={step.number} className="contents">
               {/* 카드 */}
               <motion.div
                 key={step.number}
@@ -102,7 +102,7 @@ export default function HowItWorks() {
                   <span className="hidden sm:block text-2xl px-4">→</span>
                 </motion.div>
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>
