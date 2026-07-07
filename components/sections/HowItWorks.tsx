@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Clapperboard, PenLine, Video } from "lucide-react"
 
 const steps = [
   {
@@ -12,7 +13,7 @@ const steps = [
         <strong>그냥 써보세요</strong>
       </>
     ),
-    icon: "✏️",
+    icon: <PenLine size={22} strokeWidth={1.75} />,
   },
   {
     number: "02",
@@ -23,18 +24,18 @@ const steps = [
         <strong>씬·연출·흐름을 자동으로 완성</strong>해줘요
       </>
     ),
-    icon: "🎬",
+    icon: <Clapperboard size={22} strokeWidth={1.75} />,
   },
   {
     number: "03",
     title: "영상 생성",
     description: (
       <>
-        완성된 프롬프트를 Kling에 붙여넣으면<br />
+        완성된 프롬프트를 영상 생성 모델에 붙여넣으면<br />
         <strong>내 이야기가 영상이 됩니다</strong>
       </>
     ),
-    icon: "🎥",
+    icon: <Video size={22} strokeWidth={1.75} />,
   },
 ]
 
@@ -76,7 +77,7 @@ export default function HowItWorks() {
                   <span className="text-xs font-bold tracking-widest" style={{ color: "#4A90E2" }}>
                     {step.number}
                   </span>
-                  <span className="text-xl">{step.icon}</span>
+                  <span style={{ color: "#4A90E2" }}>{step.icon}</span>
                 </div>
                 <h3 className="mb-2 text-lg font-semibold" style={{ color: "#141527" }}>
                   {step.title}

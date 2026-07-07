@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { MessageCircle } from "lucide-react"
 
 const FORM_URL = "https://forms.gle/ocPrKm3y4trMcdLx7"
 const KAKAO_URL = "https://open.kakao.com/o/gt0IEFCi"
@@ -14,11 +15,12 @@ export default function BetaSignup() {
       style={{ backgroundColor: "#EFF6FF" }}
     >
       <div className="relative mx-auto max-w-xl">
+
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
           className="mb-4 text-3xl font-bold sm:text-4xl"
           style={{ color: "#141527" }}
         >
@@ -49,6 +51,7 @@ export default function BetaSignup() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
+          className="flex flex-col items-center gap-3"
         >
           <motion.a
             href={FORM_URL}
@@ -58,31 +61,27 @@ export default function BetaSignup() {
             whileTap={{ scale: 0.97 }}
           >
             <Button
-              className="rounded-xl px-10 py-4 text-base font-semibold text-white border-none shadow-lg transition-colors"
+              className="rounded-xl px-10 py-4 text-base font-semibold text-white border-none shadow-lg transition-colors cursor-pointer"
               style={{ backgroundColor: "#4A90E2" }}
             >
               베타 신청하기 →
             </Button>
           </motion.a>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.35 }}
-          className="mt-4"
-        >
-          <a
+          <motion.a
             href={KAKAO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm underline underline-offset-4"
-            style={{ color: "#63627A" }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex cursor-pointer items-center gap-2 rounded-xl border px-6 py-2.5 text-sm font-semibold transition-all duration-200"
+            style={{ borderColor: "#D1D5DB", color: "#374151", backgroundColor: "#FFFFFF" }}
           >
+            <MessageCircle size={16} strokeWidth={1.75} />
             오픈채팅방 참여하기
-          </a>
+          </motion.a>
         </motion.div>
+
       </div>
     </section>
   )

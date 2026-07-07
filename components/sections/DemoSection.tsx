@@ -30,7 +30,7 @@ const TABS = [
     label: "프롬프트",
     video: "/videos/step4.mp4",
     title: "바로 쓸 수 있는 영상 프롬프트",
-    description: "각 샷에 맞는 영상 모델 프롬프트가 자동으로 완성돼요. 복사해서 Kling에 붙여넣기만 하면 됩니다.",
+    description: "각 샷에 맞는 영상 모델 프롬프트가 자동으로 완성돼요. 복사해서 영상 생성 모델에 붙여넣기만 하면 됩니다.",
   },
 ]
 
@@ -68,15 +68,15 @@ export default function DemoSection() {
           </p>
         </motion.div>
 
-        {/* 탭 버튼 */}
-        <div className="mb-6 flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+        {/* 탭 버튼 — 모바일 2x2, 데스크탑 1행 */}
+        <div className="mb-6 grid grid-cols-2 gap-2 sm:flex sm:flex-row">
           {TABS.map((t, i) => {
             const isActive = i === active
             return (
               <button
                 key={t.number}
                 onClick={() => handleTabChange(i)}
-                className="flex flex-none items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap"
+                className="flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap sm:flex-none"
                 style={{
                   backgroundColor: isActive ? "#4A90E2" : "#F4F6FA",
                   color: isActive ? "#FFFFFF" : "#63627A",
