@@ -1,0 +1,16 @@
+<svg viewBox="0 0 338 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="255" height="84" rx="3" fill="#3E80F2"/>
+  <text x="127" y="60"
+    text-anchor="middle"
+    fill="white"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="54"
+    font-weight="900"
+    letter-spacing="-0.5">KiNOBY</text>
+  <text x="265" y="60"
+    text-anchor="start"
+    fill="#3E80F2"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="43"
+    font-weight="900">.AI</text>
+</svg>
