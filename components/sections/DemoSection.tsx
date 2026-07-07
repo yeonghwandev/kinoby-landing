@@ -36,10 +36,17 @@ const TABS = [
 
 export default function DemoSection() {
   const [active, setActive] = useState(0)
+  const [loading, setLoading] = useState(false)
   const tab = TABS[active]
 
   const sectionRef = useRef<HTMLElement>(null)
   const inView = useInView(sectionRef, { once: true, margin: "0px 0px -100px 0px" })
+
+  const handleTabChange = (i: number) => {
+    if (i === active) return
+    setLoading(true)
+    setActive(i)
+  }
 
   return (
     <section ref={sectionRef} className="px-6 py-28" style={{ backgroundColor: "#FFFFFF" }}>
@@ -68,7 +75,7 @@ export default function DemoSection() {
             return (
               <button
                 key={t.number}
-                onClick={() => setActive(i)}
+                onClick={() => handleTabChange(i)}
                 className="flex flex-none items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap"
                 style={{
                   backgroundColor: isActive ? "#4A90E2" : "#F4F6FA",
@@ -112,10 +119,37 @@ export default function DemoSection() {
                   loop
                   preload="none"
                   className="aspect-video w-full object-cover"
+                  onWaiting={() => setLoading(true)}
+                  onCanPlay={() => setLoading(false)}
+                  onPlaying={() => setLoading(false)}
                 />
               ) : (
                 <div className="aspect-video w-full" />
               )}
+
+              {/* 로딩 오버레이 */}
+              <AnimatePresence>
+                {loading && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute inset-0 flex flex-col items-center justify-center gap-3"
+                    style={{ backgroundColor: "rgba(13,13,20,0.85)" }}
+                  >
+                    {/* 스피너 */}
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }}
+                      className="h-8 w-8 rounded-full border-2 border-white/20 border-t-white"
+                    />
+                    <p className="text-sm font-medium text-white/70">
+                      영상을 불러오는 중이에요
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* 설명 */}
@@ -134,7 +168,7 @@ export default function DemoSection() {
                 {TABS.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => setActive(i)}
+                    onClick={() => handleTabChange(i)}
                     className="h-1.5 rounded-full transition-all duration-300"
                     style={{
                       width: i === active ? "2rem" : "0.5rem",
